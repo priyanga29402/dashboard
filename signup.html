@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Signup page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url('image/fingerprint.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+        .signup_container {
+            width: 300px;
+            padding: 20px;
+            margin: 100px auto;
+            background-color: rgba(197, 197, 197, 0.226);
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0, 1);
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            background-color: #d9dadb4a;
+            color: white;
+            border: 1.5px solid #f0ebeb;
+            box-sizing: border-box;
+        }
+        button {
+            background-color:#476dd6;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            width: 100%;
+
+        }
+        button:hover {
+            background-color: #1751f0;
+        }
+        .message {
+            color: red;
+            text-align: center;
+
+        }
+        .sign {
+            text-align: center;
+            color: white;
+        }
+        .use {
+            color: white;
+        }
+        .pass {
+            color: white;
+        }
+        .conpass{
+            color: white;
+        }
+        .link {
+            padding: 5px;
+            margin: 5px;
+            display: inline-block;
+            background-color: #d9dadb49;
+            color: rgb(255, 255, 255);
+            border: 1px solid #039efe;
+            box-sizing: border-box;
+        }
+        .acc {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup_container">
+        <form id="signupForm">
+            <h2 class="sign">Signup</h2>
+            <label for="username" class="use">Username</label>
+            <input type="text" id="signupusername" name="username" required>
+            <label for="password" class="pass">Password</label>
+            <input type="password" id="signuppassword" name="password" required>
+            <label for="confirmpassword" class="conpass">Confirm Password</label>
+            <input type="password" id="confirmpassword" name="confirmpassword" required>
+            <button type="submit">Signup</button>
+            <p class="message" id="signupmessage"></p>
+        </form>
+        <p class="acc">Already have an account? <a href="login.html" onclick="showLogin()" class="link">Login</a></p>
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
